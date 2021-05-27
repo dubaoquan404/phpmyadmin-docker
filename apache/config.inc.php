@@ -41,11 +41,11 @@ if (isset($_ENV['PMA_QUERYHISTORYMAX'])) {
 }
 
 /* Arbitrary server connection */
-// if (isset($_ENV['PMA_ARBITRARY']) && $_ENV['PMA_ARBITRARY'] === '1') {
-//     $cfg['AllowArbitraryServer'] = true;
-// }
+if (isset($_ENV['PMA_ARBITRARY']) && $_ENV['PMA_ARBITRARY'] === '1') {
+    $cfg['AllowArbitraryServer'] = true;
+}
 
- $cfg['AllowArbitraryServer'] = true;
+//  $cfg['AllowArbitraryServer'] = true;
 
 /* Play nice behind reverse proxys */
 if (isset($_ENV['PMA_ABSOLUTE_URI'])) {
